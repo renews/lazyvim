@@ -5,4 +5,4 @@ vim.opt.splitkeep = "cursor" -- default: screen, keep cursor position when split
 vim.opt.shell = "fish" -- default: sh, set shell to fish
 vim.opt.backspace = { "start", "eol", "indent" } -- default: "", allow backspacing over everything in insert mode
 vim.opt.path:append({ "**" }) -- Finding files - Search down into subfolders
-vim.opt.wildignore:append({ "*/node_modules/*", "*/_build/*" }) -- Ignore this folders always
+vim.opt.wildignore:append({ "*/node_modules/*", "*/_build/*", "*/deps/*" }) -- Ignore this folders always
