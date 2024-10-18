@@ -1,7 +1,7 @@
 return {
   "ahmedkhalf/project.nvim",
   opts = {
-    manual_mode = false,
+    manual_mode = true,
     patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "mix.exs" },
   },
 }
