@@ -6,3 +6,7 @@ vim.opt.shell = "fish" -- default: sh, set shell to fish
 vim.opt.backspace = { "start", "eol", "indent" } -- default: "", allow backspacing over everything in insert mode
 vim.opt.path:append({ "**" }) -- Finding files - Search down into subfolders
 vim.opt.wildignore:append({ "*/node_modules/*", "*/_build/*", "*/deps/*" }) -- Ignore this folders always
+
+-- Highlight the 120th columns
+vim.opt.colorcolumn = "120"
+vim.cmd([[highlight ColorColumn ctermbg=lightgrey guibg=lightgrey]])
