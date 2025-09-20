@@ -1,22 +1,22 @@
-return
-{
+return {
   {
-  "lmantw/themify.nvim",
-    
+    "lmantw/themify.nvim",
     lazy = false,
     priority = 999,
-    blacklist = {"ayu-light"},
+    blacklist = { "ayu-light" },
 
     config = {
-      {"diegoulloao/neofusion.nvim", 
-        opts = { 
-          dim_inactive = true, 
-          transparent_mode = true
-        }, 
+      {
+        "diegoulloao/neofusion.nvim",
+        opts = {
+          dim_inactive = true,
+          transparent_mode = true,
+        },
       },
       "nuvic/flexoki-nvim",
       "scottmckendry/cyberdream.nvim",
-      {"Shatur/neovim-ayu",
+      {
+        "Shatur/neovim-ayu",
         opts = {
           overrides = {
             Normal = { bg = "None" },
@@ -34,11 +34,9 @@ return
       "ellisonleao/gruvbox.nvim",
       "folke/tokyonight.nvim",
       "sho-87/kanagawa-paper.nvim",
-      {"rebelot/kanagawa.nvim",
-        opts = {
-          transparent = true,
-        },
-      },
+      { "rebelot/kanagawa.nvim", opts = {
+        transparent = true,
+      } },
       "comfysage/evergarden",
     },
   },
