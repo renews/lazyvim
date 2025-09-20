@@ -1,10 +1,11 @@
 return
 {
   {
-  'lmantw/themify.nvim',
+  "lmantw/themify.nvim",
     
     lazy = false,
     priority = 999,
+    blacklist = {"ayu-light"},
 
     config = {
       {"diegoulloao/neofusion.nvim", 
@@ -13,7 +14,7 @@ return
           transparent_mode = true
         }, 
       },
-      "kepano/flexoki",
+      "nuvic/flexoki-nvim",
       "scottmckendry/cyberdream.nvim",
       {"Shatur/neovim-ayu",
         opts = {
@@ -33,6 +34,11 @@ return
       "ellisonleao/gruvbox.nvim",
       "folke/tokyonight.nvim",
       "sho-87/kanagawa-paper.nvim",
+      {"rebelot/kanagawa.nvim",
+        opts = {
+          transparent = true,
+        },
+      },
       "comfysage/evergarden",
     },
   },
