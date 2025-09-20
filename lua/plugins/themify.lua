@@ -2,10 +2,9 @@ return {
   {
     "lmantw/themify.nvim",
     lazy = false,
-    priority = 999,
-    blacklist = { "ayu-light" },
+    priority = 1000,
 
-    config = {
+    opts = {
       {
         "diegoulloao/neofusion.nvim",
         opts = {
@@ -13,9 +12,11 @@ return {
           transparent_mode = true,
         },
       },
-      {"projekt0n/github-nvim-theme"},
+      { "projekt0n/github-nvim-theme" },
       "nuvic/flexoki-nvim",
-      "scottmckendry/cyberdream.nvim",
+      {
+        "scottmckendry/cyberdream.nvim",
+      },
       {
         "Shatur/neovim-ayu",
         opts = {
