@@ -13,6 +13,7 @@ return {
           transparent_mode = true,
         },
       },
+      {"projekt0n/github-nvim-theme"},
       "nuvic/flexoki-nvim",
       "scottmckendry/cyberdream.nvim",
       {
