@@ -19,16 +19,37 @@ end, { desc = "Delete Buffer" })
 -- vim.cmd([[cab cc CodeCompanion]])
 -- Custom
 
---
--- Increment/decrement
-map("n", "+", "<C-a>")
-map("n", "-", "<C-x>")
+-- Dial
+map("n", "<C-a>", function()
+  require("dial.map").manipulate("increment", "normal")
+end, { desc = "Dial increment" })
+map("n", "<C-x>", function()
+  require("dial.map").manipulate("decrement", "normal")
+end, { desc = "Dial decrement" })
+map("n", "g<C-a>", function()
+  require("dial.map").manipulate("increment", "gnormal")
+end, { desc = "Dial g-increment" })
+map("n", "g<C-x>", function()
+  require("dial.map").manipulate("decrement", "gnormal")
+end, { desc = "Dial g-decrement" })
+map("v", "<C-a>", function()
+  require("dial.map").manipulate("increment", "visual")
+end, { desc = "Dial increment" })
+map("v", "<C-x>", function()
+  require("dial.map").manipulate("decrement", "visual")
+end, { desc = "Dial decrement" })
+map("v", "g<C-a>", function()
+  require("dial.map").manipulate("increment", "gvisual")
+end, { desc = "Dial g-increment" })
+map("v", "g<C-x>", function()
+  require("dial.map").manipulate("decrement", "gvisual")
+end, { desc = "Dial g-decrement" })
 
 -- Delete a word backwards
 map("n", "dwb", 'vb"_d')
 
 -- Select all
-map("n", "<C-a>", "gg<S-v>G")
+map("n", "<Leader>ca", "gg<S-v>G", { desc = "Select all text" })
 
 -- Resize window
 map("n", "<C-w><left>", "<C-w><")
