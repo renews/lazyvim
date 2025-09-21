@@ -8,5 +8,5 @@ vim.opt.path:append({ "**" }) -- Finding files - Search down into subfolders
 vim.opt.wildignore:append({ "*/node_modules/*", "*/_build/*", "*/deps/*" }) -- Ignore this folders always
 
 -- Highlight the 120th columns
--- vim.opt.colorcolumn = "120"
+vim.opt.colorcolumn = "120"
 vim.cmd([[highlight ColorColumn ctermbg=lightgrey guibg=lightgrey]])
