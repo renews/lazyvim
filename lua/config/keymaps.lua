@@ -9,15 +9,14 @@ map("n", "<C-q>", function()
 end, { desc = "Delete Buffer" })
 
 -- CodeCompanion
--- map("n", "<C-a>", "<cmd>CodeCompanionActions<cr>", { noremap = false, silent = true })
--- map("v", "<C-a>", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
--- map("n", "<Leader>a", "<cmd>CodeCompanionChat Toggle<cr>", { noremap = true, silent = true })
--- map("v", "<Leader>a", "<cmd>CodeCompanionChat Toggle<cr>", { noremap = true, silent = true })
--- map("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true })
---
--- -- Expand 'cc' into 'CodeCompanion' in the command line
--- vim.cmd([[cab cc CodeCompanion]])
--- Custom
+map("n", "<Leader>ac", "<cmd>CodeCompanionActions<cr>", opts)
+map("v", "<C-c>", "<cmd>CodeCompanionActions<cr>", opts)
+map("n", "<Leader>a", "<cmd>CodeCompanionChat Toggle<cr>", opts)
+map("v", "<Leader>a", "<cmd>CodeCompanionChat Toggle<cr>", opts)
+map("v", "ga", "<cmd>CodeCompanionChat Add<cr>", opts)
+
+-- Expand 'cc' into 'CodeCompanion' in the command line
+vim.cmd([[cab cc CodeCompanion]])
 
 -- Dial
 map("n", "<C-a>", function()
