@@ -10,7 +10,7 @@ return {
         "ruby-lsp",
         "erlang-ls",
         "rubocop",
-        "erb-linter",
+        "erb-lint",
         "erb-formatter",
       })
     end,
