@@ -35,3 +35,23 @@ map("n", "<C-w><left>", "<C-w><")
 map("n", "<C-w><right>", "<C-w>>")
 map("n", "<C-w><up>", "<C-w>+")
 map("n", "<C-w><down>", "<C-w>-")
+
+-- My custom scripts
+local utilities = require("coder.utilities")
+
+map("n", "<Leader>fp", function()
+  utilities.copy_to_clipboard()
+end, { desc = "Copy relative path" })
+
+map("n", "<Leader>fP", function()
+  utilities.copy_to_clipboard(true)
+end, { desc = "Copy path with line number" })
+
+map("n", "<Leader>fd", function()
+  utilities.copy_buffer_directory_to_clipboard()
+end, { desc = "Copy file directory" })
+
+-- Color conversion magic
+map("n", "<leader>r", function()
+  utilities.replace_hex_with_HSL()
+end, { desc = "Replace hex with HSL" })
