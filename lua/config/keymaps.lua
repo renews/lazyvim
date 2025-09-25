@@ -48,7 +48,7 @@ end, { desc = "Dial g-decrement" })
 map("n", "dwb", 'vb"_d')
 
 -- Select all
-map("n", "<Leader>ca", "gg<S-v>G", { desc = "Select all text" })
+map("n", "<Leader>CA", "gg<S-v>G", { desc = "Select all text" })
 
 -- Resize window
 map("n", "<C-w><left>", "<C-w><")

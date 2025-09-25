@@ -1,4 +1,3 @@
-
 -- ### Usage:
 -- Call `:Codex` (or `:CodexToggle`) to open or close the Codex popup.
 -- Map your own keybindings via the `keymaps.toggle` setting.
@@ -7,25 +6,27 @@
 -- require('codex').status() -- drop in to your lualine sections
 
 return {
-  'johnseth97/codex.nvim',
+  "johnseth97/codex.nvim",
   lazy = true,
-  cmd = { 'Codex', 'CodexToggle' }, -- Optional: Load only on command execution
+  cmd = { "Codex", "CodexToggle" }, -- Optional: Load only on command execution
   keys = {
     {
-      '<leader>cc', -- Change this to your preferred keybinding
-      function() require('codex').toggle() end,
-      desc = 'Toggle Codex popup',
+      "<leader>CC", -- Change this to your preferred keybinding
+      function()
+        require("codex").toggle()
+      end,
+      desc = "Toggle Codex popup",
     },
   },
   opts = {
-    keymaps     = {
+    keymaps = {
       toggle = nil, -- Keybind to toggle Codex window (Disabled by default, watch out for conflicts)
-      quit = '<C-q>', -- Keybind to close the Codex window (default: Ctrl + q)
-    },         -- Disable internal default keymap (<leader>cc -> :CodexToggle)
-    border      = 'rounded',  -- Options: 'single', 'double', or 'rounded'
-    width       = 0.8,        -- Width of the floating window (0.0 to 1.0)
-    height      = 0.8,        -- Height of the floating window (0.0 to 1.0)
-    model       = nil,        -- Optional: pass a string to use a specific model (e.g., 'o3-mini')
-    autoinstall = true,       -- Automatically install the Codex CLI if not found
+      quit = "<C-q>", -- Keybind to close the Codex window (default: Ctrl + q)
+    }, -- Disable internal default keymap (<leader>cc -> :CodexToggle)
+    border = "rounded", -- Options: 'single', 'double', or 'rounded'
+    width = 0.8, -- Width of the floating window (0.0 to 1.0)
+    height = 0.8, -- Height of the floating window (0.0 to 1.0)
+    model = nil, -- Optional: pass a string to use a specific model (e.g., 'o3-mini')
+    autoinstall = true, -- Automatically install the Codex CLI if not found
   },
 }
