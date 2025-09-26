@@ -44,6 +44,8 @@ map("v", "g<C-x>", function()
   require("dial.map").manipulate("decrement", "gvisual")
 end, { desc = "Dial g-decrement" })
 
+map("n", "<Leader>bu", "<Cmd>UrlView<CR>", { desc = "View buffer URLs" })
+
 -- Delete a word backwards
 map("n", "dwb", 'vb"_d')
 
