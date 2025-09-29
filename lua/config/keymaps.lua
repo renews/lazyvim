@@ -18,6 +18,15 @@ end, { desc = "Delete Buffer" })
 -- -- Expand 'cc' into 'CodeCompanion' in the command line
 -- vim.cmd([[cab cc CodeCompanion]])
 
+-- Overseer
+map("n", "<leader>Ow", "<cmd>OverseerToggle<cr>", { desc = "Task list" })
+map("n", "<leader>Oo", "<cmd>OverseerRun<cr>", { desc = "Run task" })
+map("n", "<leader>Oq", "<cmd>OverseerQuickAction<cr>", { desc = "Action recent task" })
+map("n", "<leader>Oi", "<cmd>OverseerInfo<cr>", { desc = "Overseer Info" })
+map("n", "<leader>Ob", "<cmd>OverseerBuild<cr>", { desc = "Task builder" })
+map("n", "<leader>Ot", "<cmd>OverseerTaskAction<cr>", { desc = "Task action" })
+map("n", "<leader>Oc", "<cmd>OverseerClearCache<cr>", { desc = "Clear cache" })
+
 -- Dial
 map("n", "<C-a>", function()
   require("dial.map").manipulate("increment", "normal")
