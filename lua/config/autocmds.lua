@@ -14,3 +14,15 @@ vim.api.nvim_create_autocmd("VimEnter", {
     end
   end,
 })
+
+-- fixes issues of neorg with treesitter
+-- https://github.com/nvim-neorg/neorg/issues/1715#issuecomment-3367507386
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "norg", "neorg" },
+  callback = function()
+    if pcall(vim.treesitter.start) then
+      vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    end
+  end,
+})
