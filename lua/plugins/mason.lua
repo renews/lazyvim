@@ -3,7 +3,7 @@ return {
     "mason-org/mason.nvim",
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
-        "expert",
+        -- "expert",
         "typescript-language-server",
         "css-lsp",
         "tailwindcss-language-server",
