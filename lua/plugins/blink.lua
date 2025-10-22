@@ -20,7 +20,9 @@ return {
           module = "blink-ripgrep",
           name = "Ripgrep",
           -- see the full configuration below for all available options
-          opts = {},
+          opts = {
+            project_root_marker = { ".git", "package.json", ".root", "mix.exs" },
+          },
         },
       },
     },
