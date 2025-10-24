@@ -4,7 +4,8 @@ return {
     opts = {
       -- colorscheme = "cyberdream",
       -- colorscheme = "tokyonight-night",
-      colorscheme = "matteblack",
+      -- colorscheme = "matteblack",
+      colorscheme = "kanagawa-dragon",
     },
   },
 }

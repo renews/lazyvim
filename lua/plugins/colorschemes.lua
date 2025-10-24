@@ -1,5 +1,6 @@
 return {
   { "tahayvr/matteblack.nvim", lazy = false, priority = 1000 },
+  { "rebelot/kanagawa.nvim" },
   {
     "scottmckendry/cyberdream.nvim",
     lazy = false,
